@@ -832,3 +832,18 @@ textarea {
         display: none !important;
     }
 }
+
+#form-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    #form-status {
+        font-size: 14px;
+    }
+}

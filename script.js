@@ -47,7 +47,7 @@ const modal = document.getElementById('project-modal');
 const closeModal = document.querySelector('.close-modal');
 const modalBody = document.querySelector('.modal-body');
 
-// Sample project data (replace with your actual projects)
+// Sample project data 
 const projectsData = {
   1: {
         title: "LibriCode",
@@ -127,23 +127,46 @@ window.addEventListener('click', (e) => {
     }
 });
 
+
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        // Show loading state
+        formStatus.textContent = 'Sending message...';
+        formStatus.style.color = '#333';
         
-        // Here you would typically send the data to a server
-        // For now, we'll just log it and show an alert
-        console.log({ name, email, message });
-        
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                formStatus.textContent = 'Thank you! Your message has been sent.';
+                formStatus.style.color = 'green';
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+            formStatus.style.color = 'red';
+            console.error('Form submission error:', error);
+        }
     });
 }
 
