@@ -847,3 +847,17 @@ textarea {
         font-size: 14px;
     }
 }
+
+/* Scroll Reveal Animation */
+.section, .card-style, .section-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.section.revealed, 
+.card-style.revealed, 
+.section-title.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}

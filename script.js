@@ -209,3 +209,23 @@ document.querySelectorAll('.header-right ul li a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+// Scroll Reveal Animation
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.section, .card-style, .section-title');
+    const windowHeight = window.innerHeight;
+    const revealPoint = 150; 
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('revealed');
+        } else {
+            element.classList.remove('revealed'); 
+        }
+    });
+}
+
+window.addEventListener('load', revealOnScroll);
+window.addEventListener('scroll', revealOnScroll);
