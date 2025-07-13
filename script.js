@@ -52,34 +52,18 @@ const projectsData = {
   1: {
         title: "LibriCode",
         description: "LibriCode is an online platform for programming books, organized by category and programming language. Users can search, read, download, rate books (out of 5 stars), and even contribute by adding their own books.",
-        image: "images/homeLibricode.png",
+        image: "images/Projects/homeLibriCode.png",
         technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
         link: "https://libricode.iceiy.com/",
         environment: "Built using VS Code, XAMPP, and phpMyAdmin for local development"
     },
     2: {
-        title: "University System",
-        description: "Student information system for managing courses, grades, and faculty information.",
-        image: "https://via.placeholder.com/800x500?text=University+System",
-        technologies: ["Java", "JavaFX", "SQLite"],
-        link: "#",
-        environment: "Built with Java SE and JavaFX for desktop interface"
-    },
-    3: {
-        title: "Mobile App",
-        description: "Cross-platform mobile application for task management with offline capabilities.",
-        image: "https://via.placeholder.com/800x500?text=Mobile+App",
-        technologies: ["React Native", "Firebase", "Redux"],
-        link: "#",
-        environment: "Developed using React Native framework"
-    },
-    4: {
-        title: "E-commerce Site",
-        description: "Full-featured online store with product catalog, shopping cart, and payment integration.",
-        image: "https://via.placeholder.com/800x500?text=E-commerce+Site",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-        link: "#",
-        environment: "MERN stack application"
+        title: "All-Energie - Corporate Website",
+        description: "Website developped for Allenergie, an algerian company specializing in energy services and products, the site was built to highlight the company's profile, display its offerings, and strengthen its digital presence. ",
+        image: "images/Projects/homeallenergy.png",
+        technologies: ["HTML",  "CSS", "JavaScript"],
+        link: "https://hanazerrouki.github.io/all-energie/",
+        environment: "Built using VS Code"
     }
 };
 
