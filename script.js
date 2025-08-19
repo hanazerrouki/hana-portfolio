@@ -64,7 +64,15 @@ const projectsData = {
         technologies: ["HTML",  "CSS", "JavaScript"],
         link: "https://hanazerrouki.github.io/all-energie/",
         environment: "Built using VS Code"
-    }
+    },
+    3: {
+    title: "Ziad Grapher - Photography & Event Services",
+    description: "A modern responsive portfolio website for Ziad Grapher, a professional Algerian photographer specializing in weddings, graduations, and event services. The website showcases photography works, services, and contact options.",
+    image: "images/Projects/ziadgrapher.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    link: "https://hanazerrouki.github.io/ziad-grapher/",
+    environment: "Built using VS Code"
+}
 };
 
 // Open modal with project details

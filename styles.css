@@ -866,3 +866,87 @@ textarea {
 
 
 
+/* --- Menu Links with Side Bubble Effect --- */
+.header-right ul li a {
+    position: relative !important;
+    padding: 0.6rem 1rem !important;
+    font-weight: 500 !important;
+    color: var(--text-light) !important;
+    text-decoration: none !important;
+    transition: var(--transition) !important;
+    display: inline-block !important;
+}
+
+.header-right ul li a::before,
+.header-right ul li a::after {
+    content: "" !important;
+    position: absolute !important;
+    border-radius: 50% !important;
+    background: var(--primary-color) !important;
+    opacity: 0.5 !important;
+    animation: floatBubbles 5s infinite ease-in-out !important;
+}
+
+.header-right ul li a::before {
+    width: 10px !important;
+    height: 10px !important;
+    left: -15px !important;
+    top: 40% !important;
+    animation-delay: 0s !important;
+}
+
+.header-right ul li a::after {
+    width: 12px !important;
+    height: 12px !important;
+    right: -18px !important;
+    top: 60% !important;
+    animation-delay: 2s !important;
+}
+
+.header-right ul li a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* --- Section Titles  --- */
+.section-title {
+    position: relative !important;
+    display: inline-block !important;
+    font-size: 2.8rem !important;
+    margin-bottom: 3rem !important;
+    color: var(--primary-color) !important;
+    text-align: center !important;
+    padding: 0.5rem 1.5rem !important;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "" !important;
+    position: absolute !important;
+    border-radius: 50% !important;
+    background: var(--primary-color) !important; 
+    opacity: 0.5 !important;
+    animation: floatBubbles 5s infinite ease-in-out !important;
+}
+
+.section-title::before {
+    width: 10px !important;
+    height: 10px !important;
+    left: -15px !important;
+    top: 40% !important;
+    animation-delay: 0s !important;
+}
+
+.section-title::after {
+    width: 12px !important;
+    height: 12px !important;
+    right: -18px !important;
+    top: 60% !important;
+    animation-delay: 2s !important;
+}
+
+/* Floating bubbles animation (shared) */
+@keyframes floatBubbles {
+    0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+    50%  { transform: translateY(-15px) scale(1.2); opacity: 0.3; }
+    100% { transform: translateY(0) scale(1); opacity: 0.6; }
+}
